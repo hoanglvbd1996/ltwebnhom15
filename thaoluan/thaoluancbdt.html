@@ -1,0 +1,210 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Thảo luận</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../framwork/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.css">
+   <link rel="stylesheet" href="../mycss.css">
+  <script src="../framwork/js/jquery.min.js"></script>
+  <script src="../framwork/js/bootstrap.min.js"></script>
+  <script>
+  	   $(document).ready(function(){
+                     $("#newstoriesbtn").click(function(){
+        				 	$("#newstoriesbtn").addClass("active");
+        					$("#oldstoriesbtn").removeClass("active");
+        					$(".newold #newstories").removeClass("stories");
+        					$(".newold #oldstories").addClass("stories");
+        			    });
+                });
+        		 $(document).ready(function(){
+                     $("#oldstoriesbtn").click(function(){
+        				 	$("#oldstoriesbtn").addClass("active");
+        					$("#newstoriesbtn").removeClass("active");  
+        					$(".newold #oldstories").removeClass("stories");
+        					$(".newold #newstories").addClass("stories");
+        			  });
+                });
+				  $(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+		
+  </script>
+</head>	
+
+<body>
+
+  <div class="section" data-pg-collapsed>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 p-y-1">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h1><img src="../logo_spkt.jpg" alt=""></h1>
+                        </div>
+                        <div class="col-md-10">
+                            <h1 class="text-center">Đoàn hội trường SPKT</h1> 
+                            <h2 class="text-center">Chào mừng</h2> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <nav class="navbar navbar-link" style="margin-left:50px; cursor:pointer">
+        <div class="navbar-header">
+            <a class="navbar-brand-active text-primary" href="../indexcbdt.html"><i class="fa fa-home pull-left" style="font-size:50px;" aria-hidden="true"></i></a> 
+        </div>
+        <ul class="nav lead navbar-nav pull-left">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Các hoạt động <b class="caret"></b></a> 
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="../cachoatdong/cuadoankhoacbdt.html">Của đoàn khoa</a>
+                    </li>
+                    <li>
+                        <a href="../cachoatdong/cuadoantruongcbdt.html">Của đoàn trường</a>
+                    </li>	
+                </ul>
+            </li>
+            <li class="nav-item  active">
+                <a class="nav-link" href="thaoluancbdt.html">Thảo luận</a> 
+            </li>
+        </ul>
+           <ul class="nav lead navbar-nav pull-right">
+            <li class="nav-item">
+                <a><label>Tên cán bộ đoàn trường</label></a>
+            </li>
+           <li class="nav-item">
+          <img src="../login/user_placeholder.png" style="width:50px;height:50px;" alt="" class="dropdown-toggle img-circle" data-toggle="dropdown">
+          <div class="dropdown-menu dropdowncenter">
+            <a class="dropdown-item itemcenter" href="../cbdt/quanlyhoatdong.html">Quản lý hoạt động</a>
+               <a class="dropdown-item itemcenter" href="../cbdt/quanlychidoan.html">Danh sách chi đoàn<br>	</a>
+                      <a class="dropdown-item itemcenter" href="../index.html">Đăng xuất<br>	</a>
+   		 </div>
+      </li>
+    </ul>
+    </nav>
+  <br>
+  <br>
+  <div class="container">
+  	<div class="row">
+
+    	<div class="col-md-10">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control"  placeholder="Tìm chủ đề">
+              <div class="input-group-addon"><i class="fa fa-search"></i></div>
+            </div>   
+           
+        </div>  
+         </div> 
+        <button type="submit" class="btn btn-primary">Tìm </button>
+  	 
+   </div>
+   	<div class="well">
+    	<h1>Thảo luận về đoàn trường SPKT</h1>
+    </div>
+    <div class="panel">
+  		  <div class="panel-heading"><h1>Chủ đề</h1></div>
+        <div class="panel-body">
+                <table class="table table-bordered text-center ">
+                	<thread>
+                    	<th>&nbsp;</th>
+                        <th>Chủ đề</th>
+                        <th>Topics</th>
+                         <th>Đang thảo luận</th>
+                         <th>Bài đăng mới nhất</th>
+                    </thread>
+                	<tbody>
+                    	<tr>
+                        	<td><i class="fa fa-book fa-3x"></i></td>
+                            <td><a href="danhsachcbdt.html"><strong class="text-success">Học tập</strong></a><br>
+                            	<p>abcxyz</p></td>
+                             <td><span class="badge">100</span></td>
+                             <td><a >asd</a></td>
+                             <td><a >How to?</a></td>
+                        </tr>
+                        <tr>
+                        	<td><i class="fa fa-book fa-3x"></i></td>
+                            <td><a ><strong class="text-success">Học tập</strong></a><br>
+                            	<p>abcxyz</p></td>
+                             <td><span class="badge">100</span></td>
+                             <td><a >asd</a></td>
+                             <td><a >How to?</a></td>
+                        </tr>
+                        <tr>
+                        	<td><i class="fa fa-book fa-3x"></i></td>
+                            <td><a href="danhsachcbdt.html" ><strong class="text-success">Học tập</strong></a><br>
+                            	<p>abcxyz</p></td>
+                             <td><span class="badge">100</span></td>
+                             <td><a >asd</a></td>
+                             <td><a >How to?</a></td>
+                        </tr>
+                        <tr>
+                        	<td><i class="fa fa-book fa-3x"></i></td>
+                            <td><a href="danhsachcbdt.html"><strong class="text-success">Học tập</strong></a><br>
+                            	<p>abcxyz</p></td>
+                             <td><span class="badge">100</span></td>
+                             <td><a>asd</a></td>
+                             <td><a >How to?</a></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+        </div>
+    	
+    </div>
+    <div class="text-center">
+                  	<ul class="pagination">
+                        <li><a href="#">«</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">»</a></li>
+                      </ul>
+                  </div>
+  </div>
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;" data-pg-collapsed>
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1>Đăng nhập</h1>
+                <br>
+                <form>
+                	<div class="row">
+                         <div class="col-sm-12">
+                               <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input " type="radio" name="gridRadios" value="admin" checked>Admin
+                                    <input class="form-check-input" type="radio" name="gridRadios"  value="cbdk" checked>Cán bộ đoàn khoa
+                                    <input class="form-check-input" type="radio" name="gridRadios"  value="cbdt" checked>Cán bộ đoàn trường
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="doanvien" checked>Đoàn viên
+                                  </label>
+                              </div>
+    				  </div>   
+                    </div><br>
+                
+                    <input type="text" name="user" placeholder="Username">
+                    <input type="password" name="pass" placeholder="Password">
+                    <input type="button" name="login" class=" btn form-control login loginmodal-submit" id="check" value="Login">
+                </form>
+                <div class="login-help">
+                    <a href="#">Forgot Password</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

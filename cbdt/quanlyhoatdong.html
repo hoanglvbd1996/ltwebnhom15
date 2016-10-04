@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../framwork/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.css">
+   <link rel="stylesheet" href="../mycss.css">
+   <link rel="stylesheet" href="cbdt.css">
+  <script src="../framwork/js/jquery.min.js"></script>
+  <script src="../framwork/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+                     $("#newstoriesbtn").click(function(){
+        				 	$("#newstoriesbtn").addClass("active");
+        					$("#oldstoriesbtn").removeClass("active");
+        					$(".newold #newstories").removeClass("stories");
+        					$(".newold #oldstories").addClass("stories");
+        			    });
+                });
+        		 $(document).ready(function(){
+                     $("#oldstoriesbtn").click(function(){
+        				 	$("#oldstoriesbtn").addClass("active");
+        					$("#newstoriesbtn").removeClass("active");  
+        					$(".newold #oldstories").removeClass("stories");
+        					$(".newold #newstories").addClass("stories");
+        			  });
+                });
+				  $(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+	function confirmxoa()
+	{
+		var x = confirm("Bạn có muốn xóa?");
+		  if (x == true) {
+				alert( "Xóa thành công!");
+			} else {
+				 alert("Xóa thất bại!");
+			}
+
+	}
+    </script>
+</head>	
+<body>
+
+  <div class="section" data-pg-collapsed>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 p-y-1">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h1><img src="../logo_spkt.jpg" alt=""></h1>
+                        </div>
+                        <div class="col-md-10">
+                            <h1 class="text-center">Đoàn hội trường SPKT</h1> 
+                            <h2 class="text-center">Chào mừng</h2> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <nav class="navbar navbar-link" style="margin-left:50px; cursor:pointer">
+        <div class="navbar-header">
+            <a class="navbar-brand-active text-primary  active" href="../indexcbdt.html"><i class="fa fa-home pull-left" style="font-size:50px;" aria-hidden="true"></i></a> 
+        </div>
+        <ul class="nav lead navbar-nav pull-left">
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Các hoạt động <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="../cachoatdong/cuadoankhoacbdt.html">Của đoàn khoa</a></li>
+                        <li><a href="../cachoatdong/cuadoantruongcbdt.html">Của đoàn trường</a></li>
+                      </ul>
+                    </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../thaoluan/thaoluancbdt.html">Thảo luận</a> 
+            </li>
+        </ul>
+         <ul class="nav lead navbar-nav pull-right">
+            <li class="nav-item">
+                <a><label>Tên cán bộ đoàn trường</label></a>
+            </li>
+           <li class="nav-item">
+          <img src="../login/user_placeholder.png" style="width:50px;height:50px;" alt="" class="dropdown-toggle img-circle" data-toggle="dropdown">
+          <div class="dropdown-menu dropdowncenter">
+            <a class="dropdown-item itemcenter" href="quanlyhoatdong.html">Quản lý hoạt động</a>
+               <a class="dropdown-item itemcenter" href="quanlychidoan.html">Danh sách chi đoàn<br>	</a>
+                      <a class="dropdown-item itemcenter" href="../indext.html">Đăng xuất<br>	</a>
+   		 </div>
+      </li>
+    </ul>
+    </nav>
+  <br>
+  <br>
+  		<div class="wrapper">	
+        	<div class="main-panel">
+                <nav class="nav navbar navbar-default" >
+                       <div class="container-fluid center-block">
+                             <div class="navbar-brand">
+                                    <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Quản lý hoạt động</a></div>
+                      </div>
+                </nav>		<!-- nav bar -->
+                 <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                            	   <div class="content table-responsive table-full-width">
+                                   	<form>
+                                    		<button class="btn btn-default btn-outline" data-target="#themhoatdong_modal" data-toggle="modal">Thêm hoạt động</button>  <button class="btn btn-outline btn-primary" >Save</button>
+                                        	<div class="pull-right">
+                                                <button class="btn btn-outline btn-primary" data-target="#chinhsuahoatdong_modal" data-toggle="modal">Chỉnh sửa</button>
+                                             	  <button class="btn btn-danger btn-outline" onClick="confirmxoa();">Xóa hoạt động</button>
+                                 		     </div>
+                                  	  </form>
+                                    <table class="table table-hover table-striped">
+                                    	<thead>
+                                       	 	<th>Duyệt/Không duyệt</th>
+                                            <th>Tên hoạt động</th>
+                                            <th>Đơn vị đề xuất</th>
+                                            <th>Ngày dự kiến diễn ra</th>
+                                            <th>Địa điểm</th>
+                                            <th></th>
+                                        </thead>
+                                          <tbody>
+                                        	<tr>
+                                            	<td>
+                                                    <div class="form-check">
+                                                      <label class="form-check-label">
+                                                        <input class="form-check-input " type="radio" name="gridRadios" value="admin" checked>Duyệt
+                                                        <input class="form-check-input" type="radio" name="gridRadios"  value="cbdk" checked>Không duyệt</label>
+                                         		 </div>
+                                                </td>
+                                            		<td>Mùa hè xanh</td>
+                                                    <td>Đoàn khoa CNTT</td>
+                                                    <td>6/6/2016</td>
+                                                    <td>ABC</td>
+                                                    <td><a href="file:///C|/Users/H/Desktop/web/tintuc/detail.html">Xem chi tiết</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    	 </div>
+                    </div>
+          		  </div>     
+                                       
+             </div>
+        </div>
+         <div class="text-center">
+                        <ul class="pagination">
+                            <li><a href="">«</a></li>
+                            <li class="active"><a href="menpage1.html">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">»</a></li>
+                          </ul>
+                      </div>
+        <div id="themhoatdong_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+   	<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center">Thêm hoạt động</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+            	<form method="post" action="">
+                      <div class="col-lg-12">
+                        <h4>Tên hoạt động</h4><p><input class="form-control" type="text" name="tenhoatdong"></p>
+                         <h4>Đơn vị tổ chức</h4><p><input class="form-control" type="text" name="donvitochuc"></p>
+                         <h4>Ngày diễn ra</h4><p><input class="form-control" type="text" name="ngaydienra"></p>
+                         <h4>Nội dung</h4><p><input class="form-control" type="text"   name="noidung"></p>
+                         <h4>Hình ảnh kèm theo</h4><p><input class="form-control" type="file"   name="hinhanh"></p>
+					</div>   
+               	   <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-outline">Close</button>
+                    <input class="btn btn-primary btn-outline" type="submit" name="submit">
+              	</div>
+         	 </form>
+             </div>
+          </div>
+      </div>
+    </div>
+</div>
+	<div id="chinhsuahoatdong_modal" class="modal modal-fullscreen fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+   	<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center">Chỉnh sửa hoạt động</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+            	<form method="post" action="">
+                      <div class="col-lg-5">
+                        <h4>Tên hoạt động</h4><p><input class="form-control" type="text" name="tenhoatdong" value="Mùa hè xanh"></p>
+                         <h4>Đơn vị tổ chức</h4><p><input class="form-control" type="text" name="donvitochuc" value="Đoàn khoa CNTT"></p>
+                         <h4>Ngày diễn ra</h4><p><input class="form-control" type="date" name="ngaydienra"></p>
+                        <h4>Điểm rèn luyện</h4><p><input class="form-control" type="date" name="ngaydienra" value="15"></p>
+						</div>  
+                         <div class="col-lg-7">
+                         <h4>Nội dung</h4><p> <textarea class="form-control" rows="13" id="comment"></textarea></p>
+                         <h4>Hình ảnh kèm theo</h4><p><input class="form-control" type="file"   name="hinhanh"></p>
+						</div>  
+               	   <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-outline">Close</button>
+                    <input class="btn btn-primary btn-outline" type="submit" name="submit">
+              	</div>
+         	 </form>
+             </div>
+          </div>
+      </div>
+    </div>
+</div>
+</body>
+
+</html>

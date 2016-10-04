@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quản lý tin nhắn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../framwork/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../framwork/css/bootstrap.css">
+   <link rel="stylesheet" href="../mycss.css">
+   <link rel="stylesheet" href="cbdk.css">
+  <script src="../framwork/js/jquery.min.js"></script>
+  <script src="../framwork/js/bootstrap.min.js"></script>
+</head>	
+<script>
+ $(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+function Gui()
+
+{
+	var x = confirm("Bạn có chắc muốn gửi?");
+		  if (x == true) {
+				alert( "Gửi thành công!");
+			} else {
+				 alert("Gửi thất bại!");
+			}
+}
+function xoatinnhan()
+
+{
+	var x = confirm("Bạn có chắc muốn xóa?");
+		  if (x == true) {
+				alert( "Xóa thành công!");
+			} else {
+				 alert("Xóa thất bại!");
+			}
+}
+</script>
+<body>
+
+  <div class="section" data-pg-collapsed>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 p-y-1">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h1><img src="../logo_spkt.jpg" alt=""></h1>
+                        </div>
+                        <div class="col-md-10">
+                            <h1 class="text-center">Đoàn hội trường SPKT</h1> 
+                            <h2 class="text-center">Chào mừng</h2> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <nav class="navbar navbar-link" style="margin-left:50px; cursor:pointer">
+        <div class="navbar-header">
+            <a class="navbar-brand-active text-primary  active" href="../indexcbdk.html"><i class="fa fa-home pull-left" style="font-size:50px;" aria-hidden="true"></i></a> 
+        </div>
+        <ul class="nav lead navbar-nav pull-left">
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Các hoạt động <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="../cachoatdong/cuadoankhoacbdk.html">Của đoàn khoa</a></li>
+                        <li><a href="../cachoatdong/cuadoantruongcbdk.html">Của đoàn trường</a></li>
+                      </ul>
+                    </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../thaoluan/thaoluancbdk.html">Thảo luận</a> 
+            </li>
+        </ul>
+         <ul class="nav lead navbar-nav pull-right">
+            <li class="nav-item">
+                <a href="quanlytinnhan.html"><i class="fa fa-comment "></i></a>
+              </li>
+            <li class="nav-item">
+                <a><label>Tên cán bộ đoàn khoa</label></a>
+            </li>
+            <li class="nav-item">
+          <img src="../login/user_placeholder.png" style="width:50px;height:50px;" alt="" class="dropdown-toggle img-circle" data-toggle="dropdown">
+          <div class="dropdown-menu dropdowncenter">
+            <a class="dropdown-item itemcenter" href="quanlyhoatdong.html">Quản lý hoạt động</a>
+               <a class="dropdown-item itemcenter" href="diemdanh.html">Điểm danh<br>	</a>
+                <a class="dropdown-item itemcenter" href="danhsachdoanvien.html">Danh sách đoàn viên</a>
+                <a class="dropdown-item itemcenter" href="quanlythongbao.html">Quản lý thông báo</a>
+                 <a class="dropdown-item itemcenter" href="../index.html">Đăng xuất</a>
+   		 </div>
+      </li>
+    </ul>
+    </nav>
+  <br>
+  <br>
+  		<div class="">	
+        	<div class="main-panel">
+                <nav class="nav navbar navbar-default" >
+                       <div class="container-fluid center-block">
+                             <div class="navbar-brand">
+                                    <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Quản lý tin nhắn</a></div>
+                      </div>
+                </nav>		<!-- nav bar -->
+                  <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                            	   <div class="content table-responsive table-full-width">
+                                   	<form>
+                                    		<button class="btn btn-default btn-outline" data-target="#soantinnhan_modal" data-toggle="modal">Soạn tin nhắn</button>
+                                        	<div class="pull-right">
+                                             	  <button class="btn btn-danger btn-outline" onClick="xoatinnhan()">Xóa tin nhắn</button>
+                                 		     </div>
+                                  	  </form>
+                                    <table class="table table-hover table-striped">
+                                    	<thead>
+                                     	  <th></th>
+                                            <th>Tiêu đề</th>
+                                            <th>Người gửi</th>
+                                            <th>Ngày gửi</th>
+                                            <th>Chi tiết</th>
+                                        </thead>
+                                        <tbody>	
+                                            <tr>
+                                            	<td><input type="checkbox"></td>
+                                                <td>Header</td>
+                                                <td>ABC</td>
+                                                <td>1/1/2016</td>
+                                                <td><a  href="" data-target="#chitiettinnhan_modal" data-toggle="modal">Click</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    	 </div>
+                    </div>
+          		  </div>    
+                                       
+             </div>
+        </div>
+         <div class="text-center">
+                        <ul class="pagination">
+                            <li><a href="">«</a></li>
+                            <li class="active"><a href="menpage1.html">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">»</a></li>
+                          </ul>
+          </div>
+ <div id="soantinnhan_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+   	<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center">Soạn tin nhắn</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                        <h4 style="margin-left:20px;">Tiêu đề</h4><p><input class="form-control" type="text" name=""></p>
+                         <h4 style="margin-left:20px;">Gửi tới</h4><p><input class="form-control" type="text" name=""></p>
+                         <h4 style="margin-left:20px;">Nội dung</h4><p> <textarea class="form-control" rows="10" id="comment"></textarea></p>
+                      </div>   
+               	   <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-outline">Close</button>
+                   <button type="button" data-dismiss="modal" class="btn btn-default btn-outline" onClick="Gui()">Gửi</button>
+              	</div>
+             </div>
+          </div>
+      </div>
+    </div>
+    <div id="chitiettinnhan_modal" class="modal modal-fullscreen fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+   	<div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center">Chi tiết tin nhắn</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin-left:50px;">
+                        <h4>Người gửi</h4><label>ABC</label>
+                           <h4>Ngày gừi</h4><label>19:00:00 21/9/2016</label>
+                         <h4>Nội dung</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in vehicula mi, euismod vestibulum massa. Sed auctor aliquet felis, id euismod mauris tincidunt quis. Pellentesque non nisi ac justo tempus laoreet sit amet in ipsum. Nam laoreet dignissim accumsan. Suspendisse ac eros nibh. Etiam dignissim ut libero vel ultrices. Donec ipsum quam, lobortis sed quam sit amet, tincidunt mollis risus. Suspendisse a facilisis lacus, consectetur fringilla mauris. Praesent lobortis dictum vestibulum.</p>
+               	   <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-outline">Close</button>
+              	</div>
+             </div>
+          </div>
+      </div>
+    </div>
+</div>
+</body>
+
+</html>

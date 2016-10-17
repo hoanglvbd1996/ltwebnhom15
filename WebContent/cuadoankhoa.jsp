@@ -5,7 +5,6 @@
 <%@ page import="java.lang.*" %>
 
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ include file ="common.jsp" %>
 <%@ include file ="connect.jsp" %>
 <!doctype html>
 <html>

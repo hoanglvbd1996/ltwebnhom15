@@ -5,7 +5,6 @@
 <%@ page import="java.lang.*" %>
 
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ include file ="common.jsp" %>
 <%@ include file ="connect.jsp" %>
 <!doctype html>
 <html>
@@ -40,14 +39,14 @@
                         <div class="carousel-inner" role="listbox">
                           <% if(rs.next()){ %>
 	                             <div class="item active">
-	                               <a  href="chitiethoatdong.jsp?ID=<%=rs.getInt("ID")%>"><img src="img/<%=rs.getString("urlhinhanh")%>"   class="img-responsive" alt=""></a>
+	                               <a  href="chitiethoatdong.jsp?mahd=<%=rs.getInt("mahd")%>"><img src="img/<%=rs.getString("urlhinhanh")%>"   class="img-responsive" alt=""></a>
 	                                    <h1><%=rs.getString("tenhd") %></h1>
 	                                    <p><%= rs.getString("tomtat") %></p>
 	                            </div>
 	                          <%}%>
 	                        <% while(rs.next()){ %>
 	                            <div class="item ">
-	                                <a  href="chitiethoatdong.jsp?ID=<%=rs.getInt("ID")%>"><img src="img/<%=rs.getString("urlhinhanh")%>"   class="img-responsive" alt=""></a>
+	                                <a  href="chitiethoatdong.jsp?mahd=<%=rs.getInt("mahd")%>"><img src="img/<%=rs.getString("urlhinhanh")%>"   class="img-responsive" alt=""></a>
 	                                    <h1><%=rs.getString("tenhd") %></h1>
 	                                    <p><%= rs.getString("tomtat") %></p>
 	                            </div>
@@ -87,7 +86,7 @@
 				            <div class="row">
 				            <% while(rs.next()){ %>
 				                <div class="col-md-7">
-				                   <a  href="chitiethoatdong.jsp?ID=<%=rs.getInt("ID")%>" style="text-decoration:none;"> <img class="img-responsive" src="img/<%=rs.getString("urlhinhanh") %>">
+				                   <a  href="chitiethoatdong.jsp?mahd=<%=rs.getInt("mahd")%>" style="text-decoration:none;"> <img class="img-responsive" src="img/<%=rs.getString("urlhinhanh") %>">
 				                     <h2><%=rs.getString("tenhd") %></h2>
 				             		  <p><%=rs.getString("tomtat") %></p></a>
 				             		  <br><br><br>
@@ -125,7 +124,7 @@
 				            <div class="row">
 				            <% while(rs.next()){ %>
 				                <div class="col-md-7">
-				                   <a  href="chitiethoatdong.jsp?ID=<%=rs.getInt("ID")%>" style="text-decoration:none;"> <img class="img-responsive" src="img/<%=rs.getString("urlhinhanh") %>">
+				                   <a  href="chitiethoatdong.jsp?mahd=<%=rs.getInt("mahd")%>" style="text-decoration:none;"> <img class="img-responsive" src="img/<%=rs.getString("urlhinhanh") %>">
 				                     <h2><%=rs.getString("tenhd") %></h2>
 				             		  <p><%=rs.getString("tomtat") %></p>
 				             		  <br><br><br></a>
@@ -162,7 +161,7 @@
 				                        <ul style="top:0px; margin: 0 0 0 25px; padding: 0; line-height:150%; font-size: 130%;">
 				                                <% while(rs.next()){ %>
 				                             	   <li style="margin-bottom:4px;">
-				                             	   		<a  href="chitietthongbao.jsp?ID=<%=rs.getInt("ID")%>" style="padding: 0px;"><%= rs.getString("tentb") %></a>
+				                             	   		<a  href="chitietthongbao.jsp?matb=<%=rs.getInt("matb")%>" style="padding: 0px;"><%= rs.getString("tentb") %></a>
 				                                	</li>
 				                                <%}sSQL ="";%>
 				                          	<%  	
@@ -189,7 +188,7 @@
 			              <div class="panel text-center">
 			              <% while(rs.next()){ %>
 			              	<img class="img-responsive" src="img/<%=rs.getString("urlhinhanh")%>">
-			              	<a href="chitiethoatdong.jsp?ID=<%=rs.getInt("ID")%>">
+			              	<a href="chitiethoatdong.jsp?mahd=<%=rs.getInt("mahd")%>">
 			              				<h6><%=rs.getString("tenhd") %></h6>
 	                                    <p><%= rs.getString("tomtat") %></p></a>
 			              	<br><br><br>

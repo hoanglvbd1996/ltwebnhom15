@@ -1,8 +1,6 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="jdk.nashorn.internal.runtime.Undefined"%>
-<%@page import="java.sql.SQLException"%>
-<%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.net.URLEncoder"%>
 <%@ page import="java.text.SimpleDateFormat" %>
@@ -16,7 +14,7 @@ ResultSet rs ;
 conn= null;
 stat =null;
 String url= 
-"jdbc:sqlserver://localhost:1433;" + "databaseName=QLHDDoan;";
+"jdbc:sqlserver://localhost:1433;" + "databaseName=QLHDDoan;setUnicode=true&characterEncoding=UTF-8";
 
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 conn =DriverManager.getConnection(url,"h","123");

@@ -106,3 +106,6 @@ nav ul li a{    color: #fff !important;}
  .dropmenuheader-1 a{background: #303f9f !important;color: #fff !important;}
  .dropmenuheader-1{background: #303f9f !important;right:0 !important;left:auto !important;
  } 
+ .control-label{
+ margin-top:50px !important;
+ }

@@ -17,8 +17,9 @@
        <script src="framwork/js/jquery.min.js"></script>
     <script src="framwork/js/bootstrap.min.js"></script>
 </head>
-<body>
-<%@ include file ="header.jsp" %>
+<body >
+	<%@ include file="header.jsp" %>
+   
                      <div class="content">
                         <div class="container-fluid">
                             <div class="row">

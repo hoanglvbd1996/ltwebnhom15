@@ -37,15 +37,15 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-    background-color:#036;
+    background-color:#084B8A;
     color: white;
 }
 </style>
 </head>
 
 <body>
-<%@ include file="header.jsp" %>
-<div class="container-fluid">	
+	<%@ include file ="header.jsp" %>
+	<div class="container">
 <div class="row-md-4"> 
 	   	<div class="col-sm-4"> 
 	   <a href="guibaiviet.jsp?username=<%=session.getAttribute("username")%>" class="btn btn-primary">Gửi đề tài mới</a>
@@ -71,7 +71,7 @@ th {
 			 <tbody>
 			 <%while(rs.next()){ %>
 			  <tr>
-			    <td><a href="traloi.jsp?madetai=<%=rs.getString("madetai")%>"><strong class="text-success"><%=rs.getString("tendetai")%></strong></a><br></td>
+			    <td><a href="traloi.jsp?madetai=<%=rs.getString("madetai")%>" ><strong class="text-success" style="color:#036"><%=rs.getString("tendetai")%></strong></a><br></td>
 			    <td><%=rs.getString("hoten")%></td>
 			    <td>0</td>
 			    <td>0</td>
